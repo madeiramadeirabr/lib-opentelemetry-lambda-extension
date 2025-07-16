@@ -61,6 +61,8 @@ github.com/aws/aws-sdk-go-v2/internal/ini v1.8.3 h1:bIqFDwgGXXN1Kpp99pDOdKMTTb5d
 github.com/aws/aws-sdk-go-v2/internal/ini v1.8.3/go.mod h1:H5O/EsxDWyU+LP/V8i5sm8cxoZgc2fdNR9bxlOFrQTo=
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.36 h1:GMYy2EOWfzdP3wfVAGXBNKY5vK4K8vMET4sYOYltmqs=
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.36/go.mod h1:gDhdAV6wL3PmPqBhiPbnlS447GoWs8HTTOYef9/9Inw=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.50.0 h1:t/xT0VNZUj9oQmzQjq7qoQYlX9Mz6a37O3PG0STymFM=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.50.0/go.mod h1:uo14VBn5cNk/BPGTPz3kyLBxgpgOObgO8lmz+H7Z4Ck=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.12.4 h1:CXV68E2dNqhuynZJPB80bhPQwAKqBWVer887figW6Jc=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.12.4/go.mod h1:/xFi9KtvBXP97ppCz1TAEvU1Uf66qvid89rbem3wCzQ=
 github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.7.4 h1:nAP2GYbfh8dd2zGZqFRSMlq+/F6cMPBUuCsGAMkN074=
@@ -318,12 +320,18 @@ github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/secre
 github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/secretsmanagerprovider v0.129.0/go.mod h1:36tSU2+knbhU5SsSkKmG+tmBpfS0MP5j5ShWxxu8mGM=
 github.com/open-telemetry/opentelemetry-collector-contrib/connector/spanmetricsconnector v0.129.0 h1:vO0qgtI55j4tCKzuIEu+IW1b8MUjnwMKKefcIlB/Fto=
 github.com/open-telemetry/opentelemetry-collector-contrib/connector/spanmetricsconnector v0.129.0/go.mod h1:DG1JTao8taPgiTfjjGjduN2ubhZ9FxUSF1HyM8BYHao=
+github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter v0.128.0 h1:iQBoX1kUd8QKB8zmujpyseqyDi5iJMgNBmhtpRzARHo=
+github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter v0.128.0/go.mod h1:c5HhmxU/h9V5AKx/inDkpb4JiJsjuBaASfqE6419moM=
 github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter v0.129.0 h1:SVyXnxngCd+WIIigY6XmYjnrbBthfY26cuSNu2AxVhc=
 github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter v0.129.0/go.mod h1:UEZMQUgG5ABPySiMTfINW5CTYa0LWC3B6/8UFUhRQ60=
 github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.129.0 h1:eXmXfbiSJmf+3l/e2idioS3L8croCGWlqFxtq7drD1w=
 github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.129.0/go.mod h1:6jLL3CzLgEk2goh8FGkDEiBJF2S8xoE2JrJApeEJaAE=
 github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension v0.129.0 h1:ysWFa+RdvHLgeQUDj26nM8z/TiKUMxe/x/eTE7z1QpY=
 github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension v0.129.0/go.mod h1:b743chhjgMVHu+2n5adYd0ODp+41f9145VeaxyNYIR0=
+github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/awsutil v0.128.0 h1:kHqn+uK1TYTkYDUpdUqrAveP61bUqKrJFa4wyktn3js=
+github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/awsutil v0.128.0/go.mod h1:c+PTFx/EIrT2xUFM51u4YyEcotA9flkgECAPntpQxOY=
+github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/cwlogs v0.128.0 h1:rTzznGqBEIW+yY+VHnmQmo2M5kOHXsO6aOZf+GOHkRY=
+github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/cwlogs v0.128.0/go.mod h1:hp7v2o36PGOmwJNJlXLtFCB0e2dxf+CjlgIZO1eVGIc=
 github.com/open-telemetry/opentelemetry-collector-contrib/internal/common v0.129.0 h1:oM7A/qZBgALjdsIaxsq35Czi09ufqhqIuhwT+Yu/lqY=
 github.com/open-telemetry/opentelemetry-collector-contrib/internal/common v0.129.0/go.mod h1:7LPAdyC0Sfe3Cg+edlUL3wv2C9Vai3i6GAAOJTKLMIg=
 github.com/open-telemetry/opentelemetry-collector-contrib/internal/coreinternal v0.129.0 h1:qwuUfLK8ukEHcoq8CK9HFvnBcOmxNxfMtLkuKN8texM=
@@ -334,6 +342,8 @@ github.com/open-telemetry/opentelemetry-collector-contrib/internal/pdatautil v0.
 github.com/open-telemetry/opentelemetry-collector-contrib/internal/pdatautil v0.129.0/go.mod h1:lJIn8YXemp5XBSx75AGOg0rDgpRgG+ebmnyHVEWz25Y=
 github.com/open-telemetry/opentelemetry-collector-contrib/pkg/core/xidutils v0.129.0 h1:EEJxuNLIw1M/peqTEB/HzdGjcm+DYY9KaiiqXkm9EZs=
 github.com/open-telemetry/opentelemetry-collector-contrib/pkg/core/xidutils v0.129.0/go.mod h1:HhM9w1GGj7vbu+KNu8VPlp5ff3KrMbpuZVxsW+KNphQ=
+github.com/open-telemetry/opentelemetry-collector-contrib/pkg/golden v0.129.0 h1:ib4F7Rsefrpcq3Uo72UUb58+PE8uZs5rBYs1cyHGSJs=
+github.com/open-telemetry/opentelemetry-collector-contrib/pkg/golden v0.129.0/go.mod h1:U0i/4xJl9xpII4DnpHBWP3Kang7ZZuDTf7XDuBjYxKo=
 github.com/open-telemetry/opentelemetry-collector-contrib/pkg/ottl v0.129.0 h1:WUSLlIn6qhSUyE/eZ5hW8gXeDEwVpr0PGTycpiPLjOk=
 github.com/open-telemetry/opentelemetry-collector-contrib/pkg/ottl v0.129.0/go.mod h1:CjSV4GdX6JLzja2MXTbDaSAkcR4TBKK708+VTWCNy/g=
 github.com/open-telemetry/opentelemetry-collector-contrib/pkg/pdatatest v0.129.0 h1:ydkfqpZ5BWZfEJEs7OUhTHW59og5aZspbUYxoGcAEok=
@@ -358,6 +368,8 @@ github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceproc
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.129.0/go.mod h1:itXoSFDh2/D2r7QC4TdkV3q/D/Hy8O6Msagxe/mHvfY=
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor v0.129.0 h1:J9ha4qcIfFJKRcAU3lwV3SepBjzjQJQaQcotD8kHUCQ=
 github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor v0.129.0/go.mod h1:86jJKkhscPyWN5uz3MghBWZFTWtX0/8DvEqeWMfeAu0=
+github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.128.0 h1:QEVSHyOhoB98OWZacc2QtaDtoVzQjcvCnEajcJb7zJg=
+github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.128.0/go.mod h1:0LLVYM/Ybl9bpkszZqxAsBonF95XTuzQi0nAn1i+ebs=
 github.com/opencontainers/go-digest v1.0.0 h1:apOUWs51W5PlhuyGyz9FCeeBIOUDA/6nW8Oi/yOhh5U=
 github.com/opencontainers/go-digest v1.0.0/go.mod h1:0JzlMkj0TRzQZfJkVvzbP0HBR3IKzErnv2BNG4W4MAM=
 github.com/opencontainers/image-spec v1.1.1 h1:y0fUlFfIZhPF1W537XOLg0/fcx6zcHCJwooC2xJA040=

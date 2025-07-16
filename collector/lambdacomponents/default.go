@@ -17,6 +17,7 @@
 package lambdacomponents
 
 import (
+	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension"
@@ -25,6 +26,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor"
 	"github.com/open-telemetry/opentelemetry-lambda/collector/processor/decoupleprocessor"
 	"go.opentelemetry.io/collector/exporter/debugexporter"
 	"go.opentelemetry.io/collector/exporter/otlpexporter"
@@ -52,6 +54,7 @@ func Components(extensionID string) (otelcol.Factories, error) {
 	}
 
 	exporters, err := otelcol.MakeFactoryMap(
+		awscloudwatchlogsexporter.NewFactory(),
 		debugexporter.NewFactory(),
 		otlpexporter.NewFactory(),
 		otlphttpexporter.NewFactory(),
@@ -63,6 +66,7 @@ func Components(extensionID string) (otelcol.Factories, error) {
 
 	processors, err := otelcol.MakeFactoryMap[processor.Factory](
 		attributesprocessor.NewFactory(),
+		transformprocessor.NewFactory(),
 		filterprocessor.NewFactory(),
 		memorylimiterprocessor.NewFactory(),
 		probabilisticsamplerprocessor.NewFactory(),
