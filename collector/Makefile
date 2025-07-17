@@ -32,13 +32,6 @@ for-all-target: $(GOMODULES)
 clean:
 	rm -rf build/
 
-
-.PHONY: docker-build-and-push
-docker-build-and-push: set-otelcol-version
-	docker build -t lambda-extension/otel-collector:latest .
-	docker tag lambda-extension/otel-collector:latest 683720833731.dkr.ecr.us-east-2.amazonaws.com/lambda-extension/otel-collector:$(OTELCOL_VERSION)
-	docker push 683720833731.dkr.ecr.us-east-2.amazonaws.com/lambda-extension/otel-collector:$(OTELCOL_VERSION)
-
 .PHONY: docker-build-and-push
 docker-build-and-push: set-otelcol-version
 	docker build -t lambda-extension/otel-collector:latest .
