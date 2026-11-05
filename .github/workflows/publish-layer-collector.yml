@@ -53,7 +53,7 @@ permissions:
 
 jobs:
   prepare-build-jobs:
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     outputs:
       build_jobs: ${{ steps.prepare-build-jobs.outputs.build_jobs }}
     steps:
@@ -69,7 +69,7 @@ jobs:
           echo "build_jobs={"architecture": ${architectures}}" | tr -d '[:space:]' >> $GITHUB_OUTPUT
   build-layer:
     needs: prepare-build-jobs
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     strategy:
       matrix: ${{ fromJSON(needs.prepare-build-jobs.outputs.build_jobs) }}
     steps:
@@ -96,7 +96,7 @@ jobs:
           path: ${{ github.workspace }}/collector/build/opentelemetry-collector-layer-${{ matrix.architecture }}.zip
   prepare-release-jobs:
     needs: build-layer
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     outputs:
       release_jobs: ${{ steps.prepare-release-jobs.outputs.release_jobs }}
     steps:
