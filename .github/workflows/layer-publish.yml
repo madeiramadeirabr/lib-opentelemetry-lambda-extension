@@ -48,7 +48,7 @@ jobs:
   publish_layer:
     permissions:
       id-token: write # required for AWS OIDC authentication
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
 

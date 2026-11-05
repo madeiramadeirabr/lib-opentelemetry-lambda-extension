@@ -13,7 +13,7 @@ jobs:
   create-release:
     permissions:
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Create Release
@@ -23,7 +23,7 @@ jobs:
   build-layer:
     permissions:
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: codebuild-madeiramadeira-${{ github.run_id }}-${{ github.run_attempt }}
     needs: create-release
     outputs:
       NODEJS_VERSION: ${{ steps.save-node-sdk-version.outputs.SDK_VERSION}}
